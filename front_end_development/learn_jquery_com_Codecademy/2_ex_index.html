@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery Functions and Selectors</title>
+	
+</head>
+<style>
+		div {
+		    height: 100px;
+		    width: 100px;
+		    background-color: #FA6900;
+		    border-radius: 5px;
+		}
+		.vanish {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    background-color: #08c1c3;
+    border-radius: 5px;
+}
+</style>
+<body>
+	<div id="hide"></div>
+
+	<br><br><br>
+
+	<div class="vanish"></div>
+      <br/><button id="click_me">Click Me!</button>
+</body>
+<script type='text/javascript' src='jquery.js'></script>
+<script>
+  $(document).ready(function() {
+  	$("#hide").hide(6000);
+  });
+  $(document).ready(function() {
+  	$("div").fadeIn(6000);
+  });
+
+	$(document).ready(function() {
+		$("#click_me").click(function(){
+			$(".vanish").fadeOut();
+		});
+	});
+
+
+
+</script>
+
+</html>
