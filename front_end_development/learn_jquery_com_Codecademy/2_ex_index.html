@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>JQuery Functions and Selectors</title>
+
 	
 </head>
 <style>
@@ -18,15 +19,25 @@
     display: inline-block;
     background-color: #08c1c3;
     border-radius: 5px;
-}
+    }
+    .test_this {
+    height: 100px;
+    width: 100px;
+    background-color: #51ED5E;
+    border-radius: 5px;
+    display: inline-block;
+    }
 </style>
 <body>
 	<div id="hide"></div>
-
 	<br><br><br>
-
-	<div class="vanish"></div>
-      <br/><button id="click_me">Click Me!</button>
+	<div class="vanish"></div><br>
+  <button id="click_me">Click Me!</button>
+  <br><br><br>
+  <div class="test_this"></div><br>
+  <div class="test_this"></div><br>
+  <div class="test_this"></div><br>
+  <div class="test_this"></div><br>
 </body>
 <script type='text/javascript' src='jquery.js'></script>
 <script>
@@ -42,9 +53,13 @@
 			$(".vanish").fadeOut();
 		});
 	});
-
-
-
+// The THIS keyword refers to the jQuery object you're currently doing something with. If you use an event handler on an element—that's the fancy name for actions like .click() and .mouseenter(), since they handle jQuery events—you can call the actual event that occurs (such as fadeOut()) on $(this), and the event will only affect the element you're currently doing something with (for example, clicking on or mousing over). 
+//!!! No need for the quotes for THIS
+  $(document).ready(function(){
+  	$(".test_this").click(function() {
+  		$(this).fadeOut("slow");
+  	});
+  });
 </script>
 
 </html>
