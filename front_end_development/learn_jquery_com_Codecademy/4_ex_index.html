@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modifying HTML Elements</title>
+</head>
+
+<!-- CSS style -->
+<style>
+	#title {
+	    background-color: #C02942;
+	    border-radius: 5px;
+	    text-align: center;
+	    font-family: Verdana, Arial, Sans-Serif;
+	    color: #FFFFFF;
+	    width: 200px;
+	    height: 25px;
+	}
+
+	#text {
+	    background-color: #0B486B;
+	    border-radius: 5px;
+	    text-align: center;
+	    font-family: Vivaldi, Cursive;
+	    color: #FFFFFF;
+	    width: 200px;
+	    height: 25px;
+	}
+
+	.highlighted {
+	    -webkit-box-shadow: 0 0 18px #FFD700;
+	    -moz-box-shadow: 0 0 18px #FFD700;
+	    box-shadow: 0 0 48px #FFD700;
+	    cursor:pointer;
+	}   
+</style>
+
+
+<body>
+    <div id="title" class="highlighted">I'm highlighted!</div>
+		<div id="text">Highlight me, too!</div>
+    <script src="jquery.js"></script>
+<!-- Set a variable for jQuery object.
+	var p = $('p');
+	var p = $("<p>I'm a new paragraph!</p>"); -->
+
+<!-- .before() and .after() functions. 
+  $('target').after('<tag>To add</tag>');
+-->
+
+<!-- .append() inserts the specified element as the last child of the target element. 
+	$(".info").append("<p>Stuff!</p>"); -->
+
+<!-- .prepend() inserts the specified element as the first child of the target elemen.
+	.prepend() -->
+
+<!-- We can specify where in the DOM we insert an element with the .before() and .after() functions. 
+	$('target').after('<tag>To add</tag>');
+Where 'target' is the element after which you want to add something and the bit between <tag>s is the HTML element you want to add. You can add <h1>s, <div>s, or any other valid HTML you like.
+ -->
+
+<!-- .empty() deletes an element's content and all its descendants. For instance, if you .empty() an 'ol',  you'll also remove all its 'li's and their text.-->
+
+<!-- .remove(), not only deletes an element's content, but deletes the element itself. 
+	$("p").remove();-->
+
+<!-- to change the height.
+	$("div").height("100px"); -->
+
+<!-- to change the widths of HTML elements
+	$("div").width("50px"); -->
+
+<!-- .css() takes two inputs: the first is the CSS element to alter, and the second is the value to set it to.
+	$("div").css("background-color","#008800"); -->
+
+<!-- to update html-elements .html() can be used to set the contents of the first element match it finds
+	$('div').html(); -->
+
+<!-- .val() is used to get the value of form elements
+	$('input:checkbox:checked').val(); -->
+
+    <script>
+    // $(document).ready(function() {
+    // $("#text").click(function() {
+    //     $(this).addClass("highlighted");
+    //   });
+    // });
+  // to toggle a class back and fort, change 
+  // .addClass()->.toggleClass() = from the code above
+		  $(document).ready(function() {
+		    $("#text").click(function() {
+		        $(this).toggleClass("highlighted");
+		    });
+		  });
+    
+    
+    </script> 
+</body>
+</html>
