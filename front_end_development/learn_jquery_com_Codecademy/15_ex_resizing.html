@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resizing</title>
+</head>
+<!-- CSS style -->
+<style>
+div {
+    height: 100px;
+    background-color: #ABCDEF;
+    font-family: Verdana, Arial, Sans-Serif;
+    font-size: 1em;
+    text-align: center;
+}
+</style>
+<body>
+	<div>Resize Me!</div>
+	
+<script src="jquery.js"></script>
+<link rel="stylesheet" href="jquery_ui/jquery-ui.min.css">
+<script src="jquery_ui/external/jquery/jquery.js"></script>
+<script src="jquery_ui/jquery-ui.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("div").resizable();
+});
+
+</script> 
+</body>
+</html>
