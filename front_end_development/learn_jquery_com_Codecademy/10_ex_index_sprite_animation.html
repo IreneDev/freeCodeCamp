@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animated Mario</title>
+</head>
+<!-- CSS style -->
+<style>
+  body {
+  	background-color: #dadada;
+  }
+	img {
+	    position: relative;
+	    width: 150px;
+	    height: 150px;
+	}   
+</style>
+<body>
+	<img src="http://i1061.photobucket.com/albums/t480/ericqweinstein/mario.jpg">
+<script src="jquery.js"></script>
+<script>
+	$(document).ready(function() {
+		$(document).keydown(function(key) {
+			switch(parseInt(key.which,10)) {
+				//left arrow key pressed
+				case 37:
+				$("img").animate({left: "-=10px"}, "fast");
+				break;
+
+				//up arrow key pressed
+				case 38:
+				$("img").animate({top: "-=10px"}, "fast");
+				break;
+
+				//right arrow key pressed
+				case 39:
+				$("img").animate({left: "+=10px"}, "fast");
+				break;
+
+				//down arrow pressed
+				case 40:
+				$("img").animate({top: "+=10px"}, "fast");
+				break;
+			}
+		});
+	});
+</script> 
+</body>
+</html>
