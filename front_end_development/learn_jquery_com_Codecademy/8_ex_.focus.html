@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery: .focus()</title>
+</head>
+<!-- CSS style -->
+<style>
+	input {
+	    font-family: Verdana, Arial, Sans-Serif;
+	}   
+</style>
+<body>
+		<form>
+			Name: <input type='text' name='name'></input>
+		</form> 
+    <script src="jquery.js"></script>
+ 
+    <script>
+    $(document).ready(function() {
+    	$("input").focus(function(){
+    		$(this).css("outline-color", "#FF0000");
+    		
+    		// $(this).css("outline-color", "#FF0000");
+    		// to do in Mazilla add first outline-style
+    		$(this).css("outline-style", "solid");
+    		$(this).css("outline-color", "#FF0000");
+    	});
+    });  
+    </script> 
+</body>
+</html>
