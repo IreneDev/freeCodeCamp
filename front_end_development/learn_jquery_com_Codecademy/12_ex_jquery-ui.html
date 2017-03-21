@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Exploison of the Planet</title>
+  <title>Effects with jQuery UI</title>
 </head>
 <!-- CSS style -->
 <style>
@@ -31,9 +31,21 @@
 <script src="jquery_ui/jquery-ui.min.js"></script>
 
 <script>
-  $(document).ready(function() {
-    $("div").click(function(){
-    	$(this).effect("explode");
+  // $(document).ready(function() {
+  //   $("div").click(function(){
+  //   	$(this).effect("explode");
+  //   });
+  // });
+
+  // $(document).ready(function(){
+  //   $("div").click(function() {
+  //     $("div").effect("bounce", {times:3}, 1000);
+  //   });
+  // });
+
+  $(document).ready(function(){
+    $("div").click(function() {
+      $("div").effect("slide", 1000);
     });
   });
 </script> 
