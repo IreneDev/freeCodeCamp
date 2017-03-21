@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Drag Racing</title>
+</head>
+<!-- CSS style -->
+<style>
+#top {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    background-color: #cc0000;
+    left: 25px;
+}
+#bottom {
+	position: relative;
+	height:25px;
+	width: 100px;
+	background-color: #cc0000;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	top: -25px;
+}
+#fwheel {
+	position: relative;
+	height:20px;
+	width:20px;
+	border-radius: 100%;
+	background-color: black;
+	top: -35px;
+	left: 5px;
+}
+#bwheel {
+	position: relative;
+	height:20px;
+	width:20px;
+	border-radius: 100%;
+	background-color: black;
+	top: -55px;
+	left: 75px;
+}
+</style>
+<body>
+	<div id="car">
+    <div id="top"></div>
+    <div id="bottom"></div>
+    <div id="fwheel"></div>
+    <div id="bwheel"></div>
+  </div>
+	
+<script src="jquery.js"></script>
+<link rel="stylesheet" href="jquery_ui/jquery-ui.min.css">
+<script src="jquery_ui/external/jquery/jquery.js"></script>
+<script src="jquery_ui/jquery-ui.min.js"></script>
+<script>
+  $(document).ready(function() {
+  	$("#car").draggable();
+  });
+
+</script> 
+</body>
+</html>
