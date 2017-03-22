@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>.SELECTABLE() and .SORTABLE()</title>
+</head>
+<!-- CSS style -->
+<style>
+ol {
+    list-style-type: none;
+	position: relative;
+	left: -20px;
+}
+
+ol li {
+	background: #eeeeee;
+	border-radius: 5px;
+	border: 1px solid black;
+	margin: 3px;
+	padding: 0.4em;
+	font-size: 1em;
+	height: 16px;
+	font-family: Verdana, Arial, Sans-Serif;
+}
+
+ol .ui-selected {
+	background: #F39814; color: white;
+}
+</style>
+<body>
+	<ol>
+    <li>Super Mario Bros.</li>
+    <li>Tetris</li>
+    <li>Legend of Zelda: Link's Awakening</li>
+    <li>Kirby's Dream World</li>
+    <li>Burger Time</li>
+    <li>Pokémon Red</li>
+    <li>Pokémon Blue</li>
+  </ol>
+	
+<script src="jquery.js"></script>
+<link rel="stylesheet" href="jquery_ui/jquery-ui.min.css">
+<script src="jquery_ui/external/jquery/jquery.js"></script>
+<script src="jquery_ui/jquery-ui.min.js"></script>
+
+<script>
+//select items
+// $(document).ready(function() {
+//   $("ol").selectable();
+// });
+
+//sort items
+$(document).ready(function() {
+  $("ol").sortable();
+});
+
+</script> 
+</body>
+</html>
