@@ -30,11 +30,14 @@
 <script>
 	$(document).ready(function(){
 	  $("#thankyou").hide(0,1, function() {
-	  	$("#fall").addClass("animated hinge", 3000);
+	  	$("#fall").click(function() {
+	  		$("#fall").addClass("animated hinge");
+	  	});
+	  	
 	  });  
 	});	
-	$(document).ready(function(){
-		$("#thankyou").show(6000);
+	$(document).click(function(){
+		$("#thankyou").show(4000);
 	});
 </script> 
 </body>
