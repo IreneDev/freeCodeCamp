@@ -10,18 +10,21 @@
 	<link rel="stylesheet" href="animate.css"> 
 </head>
 <style>
-  body {
-  	background-color: #f57666;
-  }
+#thankyou {
+	background-color: #ec7a6d; 
+	width: 410px;
+	margin: 0 auto;
+	text-shadow: 1px 2px 3px #666;
+}
 </style>
 </style>
-<body>
-	<div class="container text-center">
-		<div id="thankyou">
-			<h1>Thank you for attention !</h1>
+<body background="images/background_ib.png">
+    <div class="container">
+		<div id="thankyou" class="text-center">
+			<h1>Thank you for attention!</h1>
 	  </div>
 		<!-- <img src="images/image5.png"> -->
-		<img id="fall" src="https://ksr-ugc.imgix.net/assets/015/506/976/b0fe1181255c19b7f7c0c08a928ef1c1_original.png?w=680&fit=max&v=1487099709&auto=format&lossless=true&s=71b9f5f887777f7d171fa6f1db80bbe4" class="img-responsive" alt="Collage of Grace Hopper's achievments" style="height: 600px;">
+		<img id="fall" src="https://ksr-ugc.imgix.net/assets/015/506/976/b0fe1181255c19b7f7c0c08a928ef1c1_original.png?w=680&fit=max&v=1487099709&auto=format&lossless=true&s=71b9f5f887777f7d171fa6f1db80bbe4" class="img-responsive" alt="Collage of Grace Hopper's achievments" style="height: 700px; margin:0 auto">
   </div> <!-- for container -->
 <script src="jquery.js"></script>
 <link rel="stylesheet" href="jquery_ui/jquery-ui.min.css">
@@ -30,13 +33,12 @@
 <script>
 	$(document).ready(function(){
 	  $("#thankyou").hide(0,1, function() {
-	  	$("#fall").click(function() {
-	  		$("#fall").addClass("animated hinge");
-	  	});
-	  	
+	  	$("#fall").ready(function() {
+	  		$("#fall").addClass("animated hinge", 2000);	
+	  	});	
 	  });  
 	});	
-	$(document).click(function(){
+	$(document).ready(function(){
 		$("#thankyou").show(4000);
 	});
 </script> 
